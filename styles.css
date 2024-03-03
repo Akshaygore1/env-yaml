@@ -1,0 +1,66 @@
+body {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0; /* Remove default body margin */
+	background-color: #092635;
+}
+
+.title {
+	text-align: center;
+	font-size: x-large;
+	margin-bottom: 20px;
+	color: #9ec8b9;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	max-width: 80vw;
+}
+
+.text-container textarea {
+	min-width: 500px;
+	width: 100%;
+	min-height: 400px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical;
+	margin: 10px;
+}
+
+.text-container button {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	transition: background-color 0.3s ease;
+}
+
+.result {
+	width: 500px;
+	min-height: 200px; /* Adjust as needed */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical; /* Allow vertical resizing */
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 500px;
+}
