@@ -37,35 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	generateButton2.addEventListener("click", function () {
-		const inputLines = document.getElementById("result").value.split("\n");
+		const lines = document.getElementById("result").value.split("\n");
+		const outputText = [];
 
-		const convertedArray = [];
-
-		inputLines.forEach((line) => {
-			line = line.trim();
-
-			if (line !== "") {
-				const parts = line.split(":");
-
-				if (parts.length === 2) {
-					const name = parts[0].trim().substring(7);
-					const value = parts[1].trim();
-					const obj = {
-						name: name,
-						value: value,
-					};
-
-					convertedArray.push(obj);
-				}
-			}
+		const result = [];
+		lines.forEach((line) => {
+			const nameValueObj = {};
+			const parts = line.split(":");
+			const key = parts[0].trim("");
+			let value = parts.slice(1).join(":").trim();
+			value = value.replace(/'/g, "").trim();
+			nameValueObj[key] = value;
+			result.push(nameValueObj);
 		});
 
-		const ExtractedValue = convertedArray.map((obj) => obj.value);
-		const outputText = [];
-		for (let i = 0; i < ExtractedValue.length; i += 2) {
-			if (i + 1 < ExtractedValue.length) {
-				const name = ExtractedValue[i];
-				const value = ExtractedValue[i + 1];
+		for (let i = 0; i < result.length; i += 2) {
+			if (i + 1 < result.length) {
+				const name = Object.values(result[i])[0];
+				const value = Object.values(result[i + 1])[0];
 				outputText.push(`${name} = ${value}\n`);
 			}
 		}
