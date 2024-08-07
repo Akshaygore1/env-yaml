@@ -10,26 +10,25 @@
 		<meta name="keywords" content="ENV file, YAML, conversion, online tool" />
 		<meta name="author" content="Akshay Gore" />
 		<title>Convert ENV File to YAML</title>
-		<title>Document</title>
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
 		<div id="main-container">
-			<div class="title">CONVERT ENV FILE TO YAML</div>
-			<div class="text-container">
+			<h1 class="title">Convert ENV File to YAML</h1>
+			<div class="converter">
 				<textarea
 					class="textarea"
 					id="textarea"
 					rows="10"
 					cols="50"
-					placeholder="PASTE YOUR ENV FILE HERE"
+					placeholder="Paste your ENV file here"
 				></textarea>
 				<div class="button-container">
-					<button id="generateButton">➡️</button>
-					<button id="copyButton">COPY</button>
-					<button id="generateButton2">⬅️</button>
+					<button id="generateButton" class="btn btn-primary">Convert to YAML</button>
+					<button id="generateButton2" class="btn btn-secondary">Convert to ENV</button>
+					<button id="copyButton" class="btn btn-outline">Copy Result</button>
 				</div>
-				<textarea class="result" id="result" placeholder="RESULT"></textarea>
+				<textarea class="result" id="result" placeholder="YAML output will appear here"></textarea>
 			</div>
 		</div>
 		<script src="./index.js"></script>
